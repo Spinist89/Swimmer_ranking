@@ -59,18 +59,25 @@ scroll_pane = ttk.Scrollbar(frame_swim_window, command=table.yview) #добав�
 table.configure(yscrollcommand=scroll_pane.set)
 scroll_pane.pack(side=tk.RIGHT, fill=tk.Y)
 
-
+scroll_content_x = ttk.Scrollbar(frame_swim_window, orient='horizontal', command=table.xview)
+scroll_content_x.pack(side=tk.BOTTOM, fill=tk.BOTH)
+table.configure(xscrollcommand=scroll_content_x.set)
 
 table.pack(expand=tk.YES, fill=tk.BOTH)
 
 # Поле кнопочек
 v_import_document = ttk.Button(frame_buttons, text="Импортировать документ")
 v_competition_setup = ttk.Button(frame_buttons, text="Настройка соревнования")
+v_athlete_search = ttk.Button(frame_buttons, text="Поиск спортсмена")
+v_remove_athlete = ttk.Button(frame_buttons, text="Удалить спортсмена")
 v_export_document = ttk.Button(frame_buttons, text="Эксспортировать документ")
 
-v_import_document.grid(row=0, column=0)
+
+v_import_document.grid(row=0, column=0,)
 v_competition_setup.grid(row=1, column=0)
-v_export_document.grid(row=2, column=0)
+v_athlete_search.grid(row=2, column=0)
+v_remove_athlete.grid(row=3, column=0)
+v_export_document.grid(row=4, column=0)
 
 # Поле добавления спортсмена
 distance = [1, 2, 3, 4, 5]
