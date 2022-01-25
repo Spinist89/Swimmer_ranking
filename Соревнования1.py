@@ -73,11 +73,11 @@ v_remove_athlete = ttk.Button(frame_buttons, text="Удалить спортсм
 v_export_document = ttk.Button(frame_buttons, text="Эксспортировать документ")
 
 
-v_import_document.grid(row=0, column=0,)
-v_competition_setup.grid(row=1, column=0)
-v_athlete_search.grid(row=2, column=0)
-v_remove_athlete.grid(row=3, column=0)
-v_export_document.grid(row=4, column=0)
+v_import_document.grid(row=0, column=0, padx=10, pady=10)
+v_competition_setup.grid(row=1, column=0, padx=10, pady=10)
+v_athlete_search.grid(row=2, column=0, padx=10, pady=10)
+v_remove_athlete.grid(row=3, column=0, padx=10, pady=10)
+v_export_document.grid(row=4, column=0, padx=10, pady=10)
 
 # Поле добавления спортсмена
 distance = [1, 2, 3, 4, 5]
@@ -94,5 +94,6 @@ e_athletes_result.grid(row=0, column=2)
 e_choice_of_distance.grid(row=0, column=3)
 e_button_add.grid(row=0, column=4)
 
+e_athletes_age._top_cal.overrideredirect(False)# исправление ошибка календаря на макОС
 
 window.mainloop()

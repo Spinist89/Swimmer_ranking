@@ -16,9 +16,9 @@ s_search_name = ttk.Entry(frame_search, justify=tk.CENTER)
 s_search_button = ttk.Button(frame_search, text="Найти")
 s_change_button = ttk.Button(frame_search, text="ИЗМЕНИТЬ")
 
-s_search_name.grid(row=0, column=0)
-s_search_button.grid(row=0, column=1)
-s_change_button.grid(row=0, column=2)
+s_search_name.grid(row=0, column=0, padx=10, pady=10)
+s_search_button.grid(row=0, column=1, padx=10, pady=10)
+s_change_button.grid(row=0, column=2, padx=10, pady=10)
 
 #поле изменения
 # lst = [('Фамил', 'Им', 'отч', 12, 2.09),
