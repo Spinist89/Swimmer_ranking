@@ -6,7 +6,7 @@ import tkinter as tk
 import athlete_search as atlser
 import competition_setup as comset
 
-class Main_screen(tk.Tk):
+class MainScreen(tk.Tk):
 
     def __init__(self):
         super().__init__()
@@ -57,8 +57,8 @@ class Main_screen(tk.Tk):
         frame_buttons.place(relx=0.7, rely=0.1, relwidth=0.3, relheight=0.6)
 
         v_import_document = ttk.Button(frame_buttons, text="Импортировать документ", command=lambda:print(fd.askopenfilename()))
-        v_competition_setup = ttk.Button(frame_buttons, text="Настройка соревнования", command=comset.Competition_setup)
-        v_athlete_search = ttk.Button(frame_buttons, text="Поиск спортсмена", command=atlser.Athlete_search)
+        v_competition_setup = ttk.Button(frame_buttons, text="Настройка соревнования", command=comset.CompetitionSetup)
+        v_athlete_search = ttk.Button(frame_buttons, text="Поиск спортсмена", command=atlser.AthleteSearch)
         v_remove_athlete = ttk.Button(frame_buttons, text="Удалить спортсмена")
         v_export_document = ttk.Button(frame_buttons, text="Эксспортировать документ")
 
@@ -87,5 +87,5 @@ class Main_screen(tk.Tk):
 
         e_athletes_age._top_cal.overrideredirect(False)  # исправление ошибка календаря на макОС
 
-main_screen = Main_screen()
+main_screen = MainScreen()
 main_screen.mainloop()

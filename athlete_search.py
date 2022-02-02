@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
-class Athlete_search(tk.Tk):
+class AthleteSearch(tk.Tk):
 
     def __init__(self):
         super().__init__()
@@ -38,8 +38,6 @@ class Athlete_search(tk.Tk):
         for header in heads:
             table.heading(header, text=header, anchor='center')
             table.column(header, anchor='center')
-        # for row in lst:
-        #     table.insert('', tk.END, values=row)
 
         scroll_content_x = ttk.Scrollbar(frame_addition, orient='horizontal', command=table.xview)
         scroll_content_x.pack(side=tk.BOTTOM, fill=tk.BOTH)

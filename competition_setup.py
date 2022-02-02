@@ -1,11 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
 
-class Competition_setup(tk.Tk):
+class CompetitionSetup(tk.Tk):
 
     def __init__(self):
         super().__init__()
         self.title('Настройка соревнования')
+        self.FONT = 'Helvetica 14 bold'
         self.geometry('650x300')
         self.frame_setting()
 
@@ -13,16 +14,16 @@ class Competition_setup(tk.Tk):
         frame_setting = tk.Frame(self, width=500, height=150, bg='grey')
         frame_setting.place(relx=0, rely=0, relwidth=1, relheight=1)
 
-        tracks = [4, 6, 8]
+        tracks = ['4', '6', '8']
 
-        s_competition_name = ttk.Label(frame_setting, text='Название соеревнований', font='Helvetica 14 bold')
+        s_competition_name = ttk.Label(frame_setting, text='Название соеревнований', font=self.FONT)
         s_competition_name_input = ttk.Entry(frame_setting, justify=tk.CENTER)
-        s_distances = ttk.Label(frame_setting, text='Дистанции', font='Helvetica 14 bold')
+        s_distances = ttk.Label(frame_setting, text='Дистанции', font=self.FONT)
         s_distances_input = ttk.Entry(frame_setting, justify=tk.CENTER)
         s_add_distance = ttk.Button(frame_setting, text='Добавить дистанцию')
         s_window_distance = ttk.Label(frame_setting)
         s_drop_distance = ttk.Button(frame_setting, text='Удалить дистанцию')
-        s_number_of_tracks = ttk.Label(frame_setting, text='Количество дорожек', font='Helvetica 14 bold')
+        s_number_of_tracks = ttk.Label(frame_setting, text='Количество дорожек', font=self.FONT)
         s_number_of_tracks1 = ttk.Combobox(frame_setting, values=tracks)
         s_save_button = ttk.Button(frame_setting, text='Сохранить')
 
