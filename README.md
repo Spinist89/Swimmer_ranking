@@ -2,7 +2,7 @@
 
 Project for the formation of swims in swimming competitions.
 
-## Deploy loccaly:
+## Deploy locally:
 
 Clone this repozitori:
 ```
