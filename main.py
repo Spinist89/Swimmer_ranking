@@ -30,12 +30,12 @@ class MainScreen(tk.Tk):
         frame_swim_window = tk.Frame(self, width=350, height=200, bg='yellow')
         frame_swim_window.place(relx=0, rely=0.1, relwidth=0.7, relheight=0.6)
 
-        heads = ['№ п/п','Фамилия Имя Отчество', "Год рождения", "Пол", "Предварительный результат", "Тренер",
+        heads = ['Дистанция','Фамилия Имя Отчество', "Пол", "Год рождения", "Предварительный результат", "Тренер",
                  "Итоговый результат", "Разряд", "Место"]
         table = ttk.Treeview(frame_swim_window, show='headings')  # show='headings' убирает первый пустой столбец
         table['columns'] = heads
-        table['displaycolumns'] = ['№ п/п', 'Фамилия Имя Отчество', "Год рождения", "Пол", "Предварительный результат",
-                                   "Тренер", "Итоговый результат", "Разряд", "Место"]  # установка порядка столбцов
+        table['displaycolumns'] = ['Дистанция','Фамилия Имя Отчество', "Пол", "Год рождения", "Предварительный результат", "Тренер",
+                 "Итоговый результат", "Разряд", "Место"]  # установка порядка столбцов
         for header in heads:
             table.heading(header, text=header, anchor='center')
             table.column(header, anchor='center')
