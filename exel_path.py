@@ -23,8 +23,9 @@ class ExelWorker:
                     if year_birth < previous_year_birth:
                         data.insert(0, i)
                         del data[k+1]
-                except:
+                except Exception:
                     pass
+
 
         new_years = [] #ранжирование по полу
         for i in range(len(data)):
@@ -48,5 +49,5 @@ class ExelWorker:
     def get_year_birth(i: tuple) -> int:
         try:
             return int(i[3].replace('г.', ''))
-        except:
+        except IndexError:
             pass
