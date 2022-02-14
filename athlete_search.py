@@ -50,5 +50,5 @@ class AthleteSearch(tk.Tk):
         table.pack(expand=tk.YES, fill=tk.BOTH)
 
 if __name__=="__main__":
-    athlete_search = Athlete_search()
+    athlete_search = AthleteSearch()
     athlete_search.mainloop()

@@ -1,5 +1,7 @@
 import tkinter as tk
+
 from tkinter import ttk
+
 
 class CompetitionSetup(tk.Tk):
 
@@ -39,5 +41,5 @@ class CompetitionSetup(tk.Tk):
         s_save_button.grid(row=3, column=2, sticky='e', padx=10, pady=10)
 
 if __name__=="__main__":
-    competition_setup = Competition_setup()
+    competition_setup = CompetitionSetup()
     competition_setup.mainloop()

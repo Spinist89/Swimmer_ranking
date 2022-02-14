@@ -1,11 +1,12 @@
-from tkinter import ttk
-from tkcalendar import DateEntry
-from tkinter import filedialog as fd
-
 import tkinter as tk
 import athlete_search as atlser
 import competition_setup as comset
 import exel_path as exp
+
+from tkinter import ttk
+from tkcalendar import DateEntry
+from tkinter import filedialog as fd
+
 
 class MainScreen(tk.Tk):
 
@@ -23,7 +24,8 @@ class MainScreen(tk.Tk):
         self.frame_manual_entry_field()
 
     def frame_top_menu(self):
-        frame_top_menu = tk.Frame(self, width=500, height=50, bg='green')
+        COLOR_GREEN = 'green'
+        frame_top_menu = tk.Frame(self, width=500, height=50, bg=COLOR_GREEN)
         frame_top_menu.place(relx=0, rely=0, relwidth=1, relheight=0.2)
 
     def frame_swim_window(self, lst = []):
@@ -81,7 +83,6 @@ class MainScreen(tk.Tk):
         self.exel = exp.ExelWorker(self.file_path)
         self.frame_swim_window(self.exel.get_data())
 
-
     def frame_manual_entry_field(self):
         frame_manual_entry_field = tk.Frame(self, width=500, height=50, bg='red')
         frame_manual_entry_field.place(relx=0, rely=0.7, relwidth=1, relheight=0.4)
@@ -101,5 +102,6 @@ class MainScreen(tk.Tk):
 
         e_athletes_age._top_cal.overrideredirect(False)  # исправление ошибка календаря на макОС
 
-main_screen = MainScreen()
-main_screen.mainloop()
+if __name__=="__main__":
+    main_screen = MainScreen()
+    main_screen.mainloop()

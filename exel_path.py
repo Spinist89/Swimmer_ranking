@@ -1,7 +1,4 @@
-from pprint import pprint
-
 import openpyxl
-from loguru import logger
 
 
 class ExelWorker:
