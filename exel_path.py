@@ -28,17 +28,21 @@ class ExelWorker:
 
 
         new_years = [] #ранжирование по полу
+
         for i in range(len(data)):
             for k, i in enumerate(data):
-                year_birth = self.get_year_birth(i)
-                previous_iter = data[k - 1]
-                previous_year_birth = self.get_year_birth(previous_iter)
-                if year_birth == previous_year_birth:
-                    if self.get_gender(i) == 'д':
-                        data.insert(new_years[len(new_years)-1], i)
-                        del data[k+1]
-                else:
-                    new_years.append(k)
+                try:
+                    year_birth = self.get_year_birth(i)
+                    previous_iter = data[k - 1]
+                    previous_year_birth = self.get_year_birth(previous_iter)
+                    if year_birth == previous_year_birth:
+                        if self.get_gender(i) == 'д':
+                            data.insert(new_years[len(new_years)-1], i)
+                            del data[k+1]
+                    else:
+                        new_years.append(k)
+                except:
+                    pass
         return data
 
     @staticmethod
